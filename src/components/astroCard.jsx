@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-const FetchAss = () => {
+const astroCard = () => {
   const [astros, setAstros] = useState([]);
  
   useEffect(() => {
@@ -23,4 +23,4 @@ const FetchAss = () => {
     </div>
   );
 };
-export default FetchAss;
+export default astroCard;
