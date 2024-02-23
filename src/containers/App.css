@@ -1,0 +1,15 @@
+:root {
+  --main-color: blue;
+  --secondary-color: red;
+}
+
+.astro_card {
+  margin: 1rem;
+  text-align: center;
+  border-radius: 2rem;
+  border: 1px solid var(--main-color);
+}
+
+.astro_name {
+  color: var(--secondary-color);
+}
