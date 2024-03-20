@@ -23,8 +23,10 @@ export default function App() {
   return (
     <div>
       <Map />
-      <h2 className='text-center'>There are {astros.length} astronauts in space</h2>
-      <AstroCard astros={astros} />
+      <div className="background-container">
+        <h2 className='text-center hero-text'>There are {astros.length} astronauts in space</h2>
+        <AstroCard astros={astros} />
+      </div>
     </div>
   )
 }

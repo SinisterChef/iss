@@ -1,15 +1,36 @@
 :root {
   --main-color: blue;
   --secondary-color: red;
+  --profile-color: #343a40;
 }
 
-.astro_card {
-  margin: 1rem;
-  text-align: center;
-  border-radius: 2rem;
-  border: 1px solid var(--main-color);
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+
+h2 {
+  font-family: "Inter", sans-serif;
 }
 
-.astro_name {
-  color: var(--secondary-color);
+h3, h4  {
+  font-family: "Source Serif 4", serif;
+}
+
+h2 {
+  font-weight: 900;
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin: .5rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid.astro_container {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.hero-text {
+  margin-top: 0;
+  padding-top: 1rem;
 }
