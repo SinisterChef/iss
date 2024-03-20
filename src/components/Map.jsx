@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
-import './fetch.css';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import './Map.css';
 
 //setting default coords to negate runtime error if API takes too long for initial render
 const defaultCoords = {
@@ -8,7 +8,7 @@ const defaultCoords = {
   longitude: "63.7678"
 }
 
-const Fetch = () => {
+const Map = () => {
   const [coords, setCoords] = useState(defaultCoords);
  
   useEffect(() => {
@@ -59,4 +59,4 @@ const Fetch = () => {
   </MapContainer>
   );
 };
-export default Fetch;
+export default Map;
