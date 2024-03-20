@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+
+
   return (
     <div>
         {astros && astros.map((astro) => (
