@@ -34,3 +34,15 @@ h2 {
   margin-top: 0;
   padding-top: 1rem;
 }
+
+@media only screen and (max-width: 991px) {
+  .grid.astro_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .grid.astro_container {
+    grid-template-columns: 1fr;
+  }
+}
