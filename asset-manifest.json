@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/iss/static/css/main.c198d58b.css",
+    "main.css": "/iss/static/css/main.2b1223f1.css",
     "main.js": "/iss/static/js/main.2ea178c5.js",
     "static/js/453.8d5b32ff.chunk.js": "/iss/static/js/453.8d5b32ff.chunk.js",
     "static/media/place-holder.jpg": "/iss/static/media/place-holder.bfdaf2c26e4c9afa0834.jpg",
     "static/media/k_bw_logo.png": "/iss/static/media/k_bw_logo.64186cd3d8b21737c8b2.png",
     "index.html": "/iss/index.html",
-    "main.c198d58b.css.map": "/iss/static/css/main.c198d58b.css.map",
+    "main.2b1223f1.css.map": "/iss/static/css/main.2b1223f1.css.map",
     "main.2ea178c5.js.map": "/iss/static/js/main.2ea178c5.js.map",
     "453.8d5b32ff.chunk.js.map": "/iss/static/js/453.8d5b32ff.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c198d58b.css",
+    "static/css/main.2b1223f1.css",
     "static/js/main.2ea178c5.js"
   ]
 }
