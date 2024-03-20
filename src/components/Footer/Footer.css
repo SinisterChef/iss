@@ -1,0 +1,9 @@
+button[type="submit"] {
+	width: calc(100% - 2em);
+	height: 4em;
+	margin: 1em;
+}
+
+footer {
+    background: #fff;
+}

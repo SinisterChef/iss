@@ -2,8 +2,14 @@ import { useState, useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import './fetch.css';
 
+//setting default coords to negate runtime error if API takes too long for initial render
+const defaultCoords = {
+  latitude: "-51.6029",
+  longitude: "63.7678"
+}
+
 const Fetch = () => {
-  const [coords, setCoords] = useState([]);
+  const [coords, setCoords] = useState(defaultCoords);
  
   useEffect(() => {
    const fetchData = () => {
@@ -38,16 +44,16 @@ const Fetch = () => {
   // </div>
     <MapContainer
     className="iss-map"
-    center={[51.505, -0.09]} 
+    center={[coords.latitude, coords.longitude]} 
     zoom={2} 
     scrollWheelZoom={false}>
     <TileLayer
       attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     />
-    <Marker position={[51.505, -0.09]}>
+    <Marker position={[coords.latitude, coords.longitude]}>
       <Popup>
-        A pretty CSS3 popup. <br /> Easily customizable.
+        Latitude: {coords.latitude} <br /> Longitude: {coords.longitude}
       </Popup>
     </Marker>
   </MapContainer>
