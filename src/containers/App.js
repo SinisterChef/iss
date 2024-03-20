@@ -1,5 +1,5 @@
-import Map from '../components/Map';
-import AstroCard from '../components/AstroCard';
+import Map from '../components/Map/Map';
+import AstroCard from '../components/AstroCard/AstroCard';
 import { useState, useEffect } from 'react';
 import './bootstrap.min.css';
 import './App.css';
@@ -23,6 +23,7 @@ export default function App() {
   return (
     <div>
       <Map />
+      <h2 className='text-center'>There are {astros.length} astronauts in space</h2>
       <AstroCard astros={astros} />
     </div>
   )
