@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
 import './Map.css';
+//importing this as direct url refercing it from the iconUrl property caused an error for some reason
 import rocket from './rocket-solid.svg';
 
 const iconISS = new L.Icon({
@@ -14,12 +15,6 @@ const iconISS = new L.Icon({
   shadowAnchor: null,
   iconSize: new L.Point(30, 45)
 });
-
-//setting default coords to negate runtime error if API takes too long for initial render
-const defaultCoords = {
-  latitude: "47.6029",
-  longitude: "-42.7678"
-}
 
 const Map = () => {
   const [coords, setCoords] = useState([]);
@@ -75,7 +70,7 @@ if (loading) {
     icon={ iconISS }
     >
       <Popup>
-        Latitude: {coords.latitude} <br /> Longitude: {coords.longitude}
+        ISS Location <br /> Latitude: {coords.latitude} <br /> Longitude: {coords.longitude}
       </Popup>
     </Marker>
   </MapContainer>
