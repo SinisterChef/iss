@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
 import './Map.css';
-//importing this as direct url refercing it from the iconUrl property caused an error for some reason
 import rocket from './rocket-solid.svg';
 
 const iconISS = new L.Icon({
@@ -28,12 +27,8 @@ const Map = () => {
         setCoords(data.iss_position);
         setLoading(false);
       });
-      //then runs sequenctiall through all the commands
-      //fetch URL
-      //Parse the data
-      //take that data and do something with it
-      //useEffect is a React Hook that lets you synchronize a component with an external system. 
     }
+
     //intial call
     fetchData();
     //contining call
@@ -47,15 +42,6 @@ if (loading) {
 }
 
   return (
-  // <div>
-  //     <p>ISS Location =====</p>
-  //     {coords && ( //&& render only if position has data, or truthy
-  //         <div>
-  //             <p>latitude: {coords.latitude}</p>
-  //             <p>longitude: {coords.longitude}</p>
-  //         </div>
-  //     )}
-  // </div>
     <MapContainer
     className="iss-map"
     center={[coords.latitude, coords.longitude]} 

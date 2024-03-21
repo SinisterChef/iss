@@ -7,6 +7,7 @@
   background: transparent;
   backdrop-filter: blur(2px);
   border: .5rem solid var(--leaflet-blue);
+  background: url('https://www.toptal.com/designers/subtlepatterns/uploads/country-quilt.png');
 }
 
 .astro_name {

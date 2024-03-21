@@ -14,7 +14,7 @@ const astroImg = [
 
 const AstroCard = ( {astros} ) => {
 console.log(astros);
-//Make a function call to fetchImage with astro.name to return a single imageURL
+
   return (
     <div className="container astro_container grid">
         {astros && astros.map((astro, index) => (

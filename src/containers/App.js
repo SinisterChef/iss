@@ -8,7 +8,6 @@ import './App.css';
 export default function App() {
 
   const [astros, setAstros] = useState([]);
-//const [portraits, setPortrait] = useState([]);
  
   useEffect(() => {
 
