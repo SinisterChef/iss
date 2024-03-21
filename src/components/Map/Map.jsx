@@ -22,7 +22,8 @@ const defaultCoords = {
 }
 
 const Map = () => {
-  const [coords, setCoords] = useState(defaultCoords);
+  const [coords, setCoords] = useState([]);
+  const [loading, setLoading] = useState(true);
  
   useEffect(() => {
    const fetchData = () => {
@@ -30,6 +31,7 @@ const Map = () => {
       .then(response => response.json())
       .then((data) => { 
         setCoords(data.iss_position);
+        setLoading(false);
       });
       //then runs sequenctiall through all the commands
       //fetch URL
@@ -45,6 +47,10 @@ const Map = () => {
     return () => clearInterval(intervalId);
     }, []);
 
+if (loading) {
+  return <div>Loading...</div>
+}
+
   return (
   // <div>
   //     <p>ISS Location =====</p>
@@ -58,7 +64,7 @@ const Map = () => {
     <MapContainer
     className="iss-map"
     center={[coords.latitude, coords.longitude]} 
-    zoom={2} 
+    zoom={4} 
     scrollWheelZoom={false}>
     <TileLayer
       attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
