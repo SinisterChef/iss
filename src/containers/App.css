@@ -2,6 +2,8 @@
   --main-color: blue;
   --secondary-color: red;
   --profile-color: #343a40;
+  --leaflet-blue: #aad3df;
+  --main-orange: darkorange;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
@@ -31,8 +33,9 @@ h2 {
 }
 
 .hero-text {
-  margin-top: 0;
-  padding-top: 1rem;
+  margin: 0;
+  background: var(--main-orange);
+  color: #fff;
 }
 
 @media only screen and (max-width: 991px) {

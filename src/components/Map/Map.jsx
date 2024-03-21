@@ -1,11 +1,24 @@
 import { useState, useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import L from 'leaflet';
 import './Map.css';
+import rocket from './rocket-solid.svg';
+
+const iconISS = new L.Icon({
+  iconUrl: rocket,
+  iconRetinaUrl: rocket,
+  iconAnchor: null,
+  popupAnchor: [-0, -5],
+  shadowUrl: null,
+  shadowSize: null,
+  shadowAnchor: null,
+  iconSize: new L.Point(30, 45)
+});
 
 //setting default coords to negate runtime error if API takes too long for initial render
 const defaultCoords = {
-  latitude: "-51.6029",
-  longitude: "63.7678"
+  latitude: "47.6029",
+  longitude: "-42.7678"
 }
 
 const Map = () => {
@@ -51,7 +64,10 @@ const Map = () => {
       attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     />
-    <Marker position={[coords.latitude, coords.longitude]}>
+    <Marker 
+    position={[coords.latitude, coords.longitude]}
+    icon={ iconISS }
+    >
       <Popup>
         Latitude: {coords.latitude} <br /> Longitude: {coords.longitude}
       </Popup>

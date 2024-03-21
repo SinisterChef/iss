@@ -6,11 +6,12 @@
   padding: 1rem;
   background: transparent;
   backdrop-filter: blur(2px);
-  /* border: 1px solid var(--main-color); */
+  border: .5rem solid var(--leaflet-blue);
 }
 
 .astro_name {
   color: var(--profile-color);
+  font-weight: 700;
 }
 
 .astro_cover {
