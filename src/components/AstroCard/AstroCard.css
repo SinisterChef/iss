@@ -24,6 +24,10 @@
   border-radius: 100%;
 }
 
+.astro_bio {
+  line-height: 1.75rem;
+}
+
 .astro_image {
   max-width: 100%;
   box-sizing: border-box;

@@ -12,6 +12,11 @@ const astroImg = [
   'https://www.nasa.gov/wp-content/uploads/2020/06/jsc2017e114808_0.jpg?w=640'
 ];
 
+        //profile_image
+        //name
+        //bio
+        //wiki
+
 const AstroCard = ( {astros} ) => {
 console.log(astros);
 
@@ -20,10 +25,11 @@ console.log(astros);
         {astros && astros.map((astro, index) => (
             <div className="astro astro_card" key={index}>
               <div className="astro astro_cover">
-                <img className="astro astro_image" src={astroImg[index]} />
+                <img className="astro astro_image" src={astro.profile_image} />
               </div>
-                <h3 className="astro astro_name">{astro.name}</h3>
-                <h6 className="astro astro_ship">Current Spacecraft: {astro.craft}</h6>
+                <a href={astro.wiki} target='_blank'><h3 className="astro astro_name">{astro.name}</h3></a>
+                <h6 className="astro astro_bio">{astro.bio}</h6>
+                {console.log(astro.age)}
             </div>
         ))}
     </div>

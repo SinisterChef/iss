@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
 import './Map.css';
@@ -19,12 +19,14 @@ const Map = () => {
   const [coords, setCoords] = useState([]);
   const [loading, setLoading] = useState(true);
  
+//https://wheretheiss.at/w/developer
+
   useEffect(() => {
    const fetchData = () => {
-    fetch('http://api.open-notify.org/iss-now.json')
+    fetch('https://api.wheretheiss.at/v1/satellites/25544')
       .then(response => response.json())
       .then((data) => { 
-        setCoords(data.iss_position);
+        setCoords(data);
         setLoading(false);
       });
     }
@@ -55,11 +57,14 @@ if (loading) {
     position={[coords.latitude, coords.longitude]}
     icon={ iconISS }
     >
-      <Popup>
-        ISS Location <br /> Latitude: {coords.latitude} <br /> Longitude: {coords.longitude}
+      <Popup
+      autoClose={false}
+      >
+        ISS Location <br /> Latitude: {Math.round(coords.latitude * 1000)/1000} <br /> Longitude: {Math.round(coords.longitude * 1000)/1000}
       </Popup>
     </Marker>
   </MapContainer>
+ 
   );
 };
 export default Map;

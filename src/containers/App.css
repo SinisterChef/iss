@@ -24,9 +24,13 @@ h2 {
   margin: .5rem;
 }
 
-
 h1, h3, h4, h6, a, button {
 	font-family: 'Merriweather', serif;
+}
+
+a,
+a:hover {
+  color: var(--main-orange);
 }
 
 nav a {

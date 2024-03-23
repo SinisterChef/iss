@@ -10,12 +10,12 @@ export default function App() {
   const [astros, setAstros] = useState([]);
  
   useEffect(() => {
-
-    fetch('http://api.open-notify.org/astros.json')
+    //prod https://ll.thespacedevs.com/2.2.0/astronaut/?in_space=true
+      fetch('https://lldev.thespacedevs.com/2.2.0/astronaut/?age__gt=10&in_space=true')
       .then(response => response.json())
       .then((data) => { 
         console.log(data);
-        setAstros(data.people);
+        setAstros(data.results);
       });
     }, []);
 
