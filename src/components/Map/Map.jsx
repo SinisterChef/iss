@@ -34,7 +34,7 @@ const Map = () => {
     //intial call
     fetchData();
     //contining call
-    const intervalId = setInterval(fetchData, 1000);
+    const intervalId = setInterval(fetchData, 3000);
     //clean up upon re-render to avoid memory leaks
     return () => clearInterval(intervalId);
     }, []);
