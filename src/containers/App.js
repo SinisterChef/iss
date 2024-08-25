@@ -14,7 +14,6 @@ export default function App() {
       fetch('https://lldev.thespacedevs.com/2.2.0/astronaut/?age__gt=10&in_space=true')
       .then(response => response.json())
       .then((data) => { 
-        console.log(data);
         setAstros(data.results);
       });
     }, []);
@@ -23,9 +22,12 @@ export default function App() {
     <div>
       <Map />
       <div className="background-container">
-        <h2 className='text-center hero-text'>There are {astros.length} astronauts in space</h2>
+      <h2 className='text-center hero-text'>
+        {astros ? `There are ${astros.length} astronauts in space` : "Loading"}
+      </h2>
         <AstroCard astros={astros} />
-      </div>
+        <p className="text-center"><small>The astronaut API is usually out of date. This project is just for demonstration purposes.</small></p>
+      </div> 
     </div>
   )
 }
