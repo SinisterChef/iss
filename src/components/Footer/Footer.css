@@ -4,6 +4,10 @@ button[type="submit"] {
 	margin: 1em;
 }
 
+button[type="submit"] i {
+	margin-right: .25rem;
+}
+
 footer {
     background: #fff;
 }
