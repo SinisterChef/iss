@@ -26,7 +26,7 @@ export default function App() {
         {astros ? `There are ${astros.length} astronauts in space` : "Loading"}
       </h2>
         <AstroCard astros={astros} />
-        <p className="text-center"><small>The astronaut API is usually out of date. This project is just for demonstration purposes.</small></p>
+        <p className="text-center"><small>The <a href="https://lldev.thespacedevs.com/2.2.0/astronaut/?age__gt=10&in_space=true"><strong>Astronaut API</strong></a> is usually out of date. This project is just for demonstration purposes.</small></p>
       </div> 
     </div>
   )
