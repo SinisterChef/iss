@@ -40,7 +40,14 @@ const Map = () => {
     }, []);
 
 if (loading) {
-  return <div className="load">Retrieving ISS coordinate data...</div>
+  return (
+    <>
+      <div className="load">
+        <div>Retrieving ISS coordinate data...</div>
+        <div className="small">It is a free API, so it might take a few seconds on initial page load.</div>
+      </div>
+    </>
+  )
 }
 
   return (
