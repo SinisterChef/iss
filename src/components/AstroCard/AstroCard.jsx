@@ -3,7 +3,6 @@ import './AstroCard.css';
 import anonAstro from './anon_astro.webp';
 
 const AstroCard = ( {astros} ) => {
-console.log(astros);
 
 const truncateWithLink = (bio, maxLength, wikiUrl) => {
   if (!bio) return 'No biography available.';
