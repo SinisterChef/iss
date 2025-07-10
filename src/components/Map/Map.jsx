@@ -40,7 +40,7 @@ const Map = () => {
     }, []);
 
 if (loading) {
-  return <div>Loading... if this takes longer than 5 second you probably have to reload the page with http only. The Notify API doesn't support https</div>
+  return <div className="load">Retrieving ISS coordinate data...</div>
 }
 
   return (

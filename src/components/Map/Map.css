@@ -1,3 +1,9 @@
 .iss-map  {
     height: 50vh;
 }
+
+.load {
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 1rem;
+}

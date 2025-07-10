@@ -23,7 +23,7 @@ export default function App() {
       <Map />
       <div className="background-container">
       <h2 className='text-center hero-text'>
-        {astros.length ? `There are ${astros.length} astronauts in space` : "Loading..."}
+        {astros.length ? `There are ${astros.length} astronauts in space` : "Retrieving ISS Astronaught data..."}
       </h2>
         <AstroCard astros={astros} />
         <p className="text-center"><small>The <a href="https://lldev.thespacedevs.com/2.2.0/astronaut/?age__gt=10&in_space=true"><strong>Astronaut API</strong></a> is usually out of date. This project is just for demonstration purposes.</small></p>
