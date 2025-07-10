@@ -1,18 +1,16 @@
 {
   "files": {
-    "main.css": "/iss/static/css/main.c2d5ae87.css",
-    "main.js": "/iss/static/js/main.9b9b24f0.js",
-    "static/js/453.8d5b32ff.chunk.js": "/iss/static/js/453.8d5b32ff.chunk.js",
+    "main.css": "/iss/static/css/main.aaddcec4.css",
+    "main.js": "/iss/static/js/main.bfa60f14.js",
     "static/media/anon_astro.webp": "/iss/static/media/anon_astro.7a6db2d2f73f931f7daf.webp",
     "static/media/k_bw_logo.png": "/iss/static/media/k_bw_logo.64186cd3d8b21737c8b2.png",
     "index.html": "/iss/index.html",
     "static/media/rocket-solid.svg": "/iss/static/media/rocket-solid.97463137604a50d19f8992c8f2e2e516.svg",
-    "main.c2d5ae87.css.map": "/iss/static/css/main.c2d5ae87.css.map",
-    "main.9b9b24f0.js.map": "/iss/static/js/main.9b9b24f0.js.map",
-    "453.8d5b32ff.chunk.js.map": "/iss/static/js/453.8d5b32ff.chunk.js.map"
+    "main.aaddcec4.css.map": "/iss/static/css/main.aaddcec4.css.map",
+    "main.bfa60f14.js.map": "/iss/static/js/main.bfa60f14.js.map"
   },
   "entrypoints": [
-    "static/css/main.c2d5ae87.css",
-    "static/js/main.9b9b24f0.js"
+    "static/css/main.aaddcec4.css",
+    "static/js/main.bfa60f14.js"
   ]
 }
